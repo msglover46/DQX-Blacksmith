@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m7T-wi-nKu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="brO-pp-P6p">
+            <objects>
+                <navigationController restorationIdentifier="root" storyboardIdentifier="root" id="m7T-wi-nKu" customClass="NavigationController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VbF-Nh-5z1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pFo-FK-ENq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GyX-gP-UWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-954" y="-532"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DQX　 鍛冶サポート" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rot-y8-afD">
+                                <rect key="frame" x="10" y="88" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KLa-sQ-P6o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHR-fK-a9v" customClass="CBAutoScrollLabel">
+                                <rect key="frame" x="10" y="148" width="394" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Af1-kt-EOB"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Tl0-xa-yUa">
+                                <rect key="frame" x="10" y="188" width="394" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUo-vj-k3O" customClass="PushButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="作るものを選ぶ">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="CVC-4s-EXR" kind="show" animates="NO" id="yJg-Ai-Fum"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noR-Oa-HsF" customClass="PushButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                        <rect key="frame" x="207" y="0.0" width="187" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="自分で設定する">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Chj-Uc-g8l" kind="show" animates="NO" id="B6v-HK-Ln3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kiQ-Dk-FPI"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="91" translatesAutoresizingMaskIntoConstraints="NO" id="LIJ-jG-8hy">
+                                <rect key="frame" x="243" y="822" width="151" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tz0-R8-lsh" customClass="SubButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="HGi-6n-S3S" kind="show" animates="NO" id="hgk-WV-Olz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gad-qe-rdX" customClass="SubButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                        <rect key="frame" x="121" y="0.0" width="30" height="30"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="pcB-Lu-cRu" kind="show" animates="NO" id="Z6r-LZ-mxV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gad-qe-rdX" firstAttribute="leading" secondItem="tz0-R8-lsh" secondAttribute="trailing" constant="10" id="5eM-6P-1iW"/>
+                                    <constraint firstItem="Gad-qe-rdX" firstAttribute="top" secondItem="LIJ-jG-8hy" secondAttribute="top" id="7g3-fi-5vY"/>
+                                    <constraint firstItem="tz0-R8-lsh" firstAttribute="top" secondItem="LIJ-jG-8hy" secondAttribute="top" id="GZx-IX-g0j"/>
+                                    <constraint firstAttribute="bottom" secondItem="tz0-R8-lsh" secondAttribute="bottom" id="Krq-GM-Bj7"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gad-qe-rdX" secondAttribute="bottom" id="ey9-rN-9bd"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gad-qe-rdX" secondAttribute="trailing" id="kM7-eb-TNr"/>
+                                </constraints>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r9n-k1-4UN">
+                                <rect key="frame" x="10" y="248" width="394" height="564"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tl0-xa-yUa" firstAttribute="top" secondItem="UHR-fK-a9v" secondAttribute="bottom" constant="10" id="08d-rm-OuB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r9n-k1-4UN" secondAttribute="trailing" constant="10" id="0Xt-xB-REq"/>
+                            <constraint firstItem="rot-y8-afD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3vq-Ca-alO"/>
+                            <constraint firstItem="Tl0-xa-yUa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="8UZ-Q6-22U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tl0-xa-yUa" secondAttribute="trailing" constant="10" id="94H-8o-duv"/>
+                            <constraint firstItem="UHR-fK-a9v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BUo-hw-6eb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rot-y8-afD" secondAttribute="trailing" constant="10" id="DaK-Mi-KS5"/>
+                            <constraint firstItem="UHR-fK-a9v" firstAttribute="top" secondItem="rot-y8-afD" secondAttribute="bottom" constant="10" id="Dn0-yP-gIK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UHR-fK-a9v" secondAttribute="trailing" constant="10" id="IEh-YQ-a7i"/>
+                            <constraint firstItem="r9n-k1-4UN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="R1N-LS-1o8"/>
+                            <constraint firstItem="rot-y8-afD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Yia-vK-dkZ"/>
+                            <constraint firstItem="r9n-k1-4UN" firstAttribute="top" secondItem="Tl0-xa-yUa" secondAttribute="bottom" constant="10" id="bxs-3g-7Jb"/>
+                            <constraint firstItem="LIJ-jG-8hy" firstAttribute="top" secondItem="r9n-k1-4UN" secondAttribute="bottom" constant="10" id="nIe-nd-3WM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LIJ-jG-8hy" secondAttribute="bottom" constant="10" id="s0S-aX-qaL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LIJ-jG-8hy" secondAttribute="trailing" constant="20" id="xK2-lB-hlN"/>
+                            <constraint firstItem="Tl0-xa-yUa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xLK-9c-FK1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iVn-RM-9Pw"/>
+                    <connections>
+                        <outlet property="appTitleLabel" destination="rot-y8-afD" id="2WH-Sp-0mG"/>
+                        <outlet property="customProductButton" destination="noR-Oa-HsF" id="Kb9-gI-B7j"/>
+                        <outlet property="mailButton" destination="tz0-R8-lsh" id="Mbk-Ni-mI9"/>
+                        <outlet property="newsLabel" destination="UHR-fK-a9v" id="CfY-UP-u8L"/>
+                        <outlet property="selectProductButton" destination="mUo-vj-k3O" id="K5f-cr-oE9"/>
+                        <outlet property="settingButton" destination="Gad-qe-rdX" id="ahl-6E-WVH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="182.60869565217394" y="-447.32142857142856"/>
+        </scene>
+        <!--作業時間の設定-->
+        <scene sceneID="T4d-lz-3b5">
+            <objects>
+                <viewController id="4QT-HG-Buf" customClass="SettingTimeViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eRU-ES-YfA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="F0P-Wr-EfI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="作業時間の設定" id="8Di-jI-qAq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vNi-TK-YZX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-512" y="-1612"/>
+        </scene>
+        <!--成功率の設定-->
+        <scene sceneID="505-Su-CCm">
+            <objects>
+                <viewController id="u0w-7y-EkH" customClass="SettingRateViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IIr-hD-3QY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cgw-2e-TAC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="成功率の設定" id="0Fp-9R-dt7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79v-8S-5L1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="-1620"/>
+        </scene>
+        <!--Setting Product View Controller-->
+        <scene sceneID="Wti-cr-DgH">
+            <objects>
+                <viewController id="HEl-4O-Mav" customClass="SettingProductViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hnq-Ef-kGf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2H0-ai-2xp" customClass="SettingProductTableView" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="normalCell" rowHeight="49" id="wrA-RM-O5n">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="49"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wrA-RM-O5n" id="lRd-Ju-Bpp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="levelCell" rowHeight="75" id="WG5-6Y-F62">
+                                        <rect key="frame" x="0.0" y="77" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WG5-6Y-F62" id="4VO-pD-l97">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utp-G7-gLp">
+                                                    <rect key="frame" x="30" y="11" width="25" height="53"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="dKz-nr-qbV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDP-Ug-sQc">
+                                                    <rect key="frame" x="165" y="0.0" width="180" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="180" id="4vL-OC-v0q"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x0n-rr-qni">
+                                                    <rect key="frame" x="65" y="0.0" width="90" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="90" id="XBf-Cw-r3D"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="x0n-rr-qni" secondAttribute="bottom" id="6Oc-ia-em8"/>
+                                                <constraint firstItem="Utp-G7-gLp" firstAttribute="leading" secondItem="4VO-pD-l97" secondAttribute="leadingMargin" constant="10" id="UpU-Pc-KeU"/>
+                                                <constraint firstItem="aDP-Ug-sQc" firstAttribute="leading" secondItem="x0n-rr-qni" secondAttribute="trailing" constant="10" id="VdE-tb-vBL"/>
+                                                <constraint firstItem="aDP-Ug-sQc" firstAttribute="top" secondItem="4VO-pD-l97" secondAttribute="top" id="XqS-AR-Lhk"/>
+                                                <constraint firstItem="x0n-rr-qni" firstAttribute="leading" secondItem="Utp-G7-gLp" secondAttribute="trailing" constant="10" id="baK-D8-U68"/>
+                                                <constraint firstItem="x0n-rr-qni" firstAttribute="top" secondItem="4VO-pD-l97" secondAttribute="top" id="bav-UJ-Wo6"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Utp-G7-gLp" secondAttribute="bottom" id="jdo-IH-1D4"/>
+                                                <constraint firstAttribute="bottom" secondItem="aDP-Ug-sQc" secondAttribute="bottom" id="lGM-y6-tvu"/>
+                                                <constraint firstItem="Utp-G7-gLp" firstAttribute="top" secondItem="4VO-pD-l97" secondAttribute="topMargin" id="sHu-U3-B0F"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="toolCell" id="El7-Y5-FNw">
+                                        <rect key="frame" x="0.0" y="152" width="414" height="39.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="El7-Y5-FNw" id="Rle-qb-q46">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="39.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoJ-dy-nDM">
+                                                    <rect key="frame" x="30" y="11" width="170" height="17.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="170" id="EZB-2D-IUQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Y3-xM-yro">
+                                                    <rect key="frame" x="280" y="0.0" width="60" height="39.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="eXD-EB-alO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eno-wX-Hfw">
+                                                    <rect key="frame" x="210" y="0.0" width="60" height="39.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="12u-su-o2S"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Eno-wX-Hfw" firstAttribute="leading" secondItem="HoJ-dy-nDM" secondAttribute="trailing" constant="10" id="5wc-Bo-VM7"/>
+                                                <constraint firstItem="Eno-wX-Hfw" firstAttribute="top" secondItem="Rle-qb-q46" secondAttribute="top" id="IMW-LL-73S"/>
+                                                <constraint firstItem="9Y3-xM-yro" firstAttribute="leading" secondItem="Eno-wX-Hfw" secondAttribute="trailing" constant="10" id="iGn-fl-vc3"/>
+                                                <constraint firstItem="HoJ-dy-nDM" firstAttribute="leading" secondItem="Rle-qb-q46" secondAttribute="leadingMargin" constant="10" id="jcy-Zv-uVm"/>
+                                                <constraint firstItem="9Y3-xM-yro" firstAttribute="top" secondItem="Rle-qb-q46" secondAttribute="top" id="lOf-08-cov"/>
+                                                <constraint firstItem="HoJ-dy-nDM" firstAttribute="top" secondItem="Rle-qb-q46" secondAttribute="topMargin" id="loO-eO-6tP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="HoJ-dy-nDM" secondAttribute="bottom" id="nGD-GY-ZP7"/>
+                                                <constraint firstAttribute="bottom" secondItem="9Y3-xM-yro" secondAttribute="bottom" id="s3e-Jo-h2A"/>
+                                                <constraint firstAttribute="bottom" secondItem="Eno-wX-Hfw" secondAttribute="bottom" id="sBk-Vm-06n"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B9i-3p-tfZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2H0-ai-2xp" firstAttribute="leading" secondItem="B9i-3p-tfZ" secondAttribute="leading" id="EMB-Qj-JZ6"/>
+                            <constraint firstItem="2H0-ai-2xp" firstAttribute="top" secondItem="B9i-3p-tfZ" secondAttribute="top" id="Trk-SQ-5Ca"/>
+                            <constraint firstItem="B9i-3p-tfZ" firstAttribute="bottom" secondItem="2H0-ai-2xp" secondAttribute="bottom" id="dfE-FB-Ypj"/>
+                            <constraint firstItem="B9i-3p-tfZ" firstAttribute="trailing" secondItem="2H0-ai-2xp" secondAttribute="trailing" id="v79-ee-r7l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RmV-g7-2fH"/>
+                    <connections>
+                        <outlet property="tableView" destination="2H0-ai-2xp" id="ric-i3-aPX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgf-iV-Cog" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="-1625"/>
+        </scene>
+        <!--作るものを選ぶ-->
+        <scene sceneID="PWY-TP-vlX">
+            <objects>
+                <viewController id="CVC-4s-EXR" customClass="ProductViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iTl-ub-Bq7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="05T-jC-oDN">
+                                <rect key="frame" x="10" y="171.5" width="394" height="248"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MQW-WP-HOz">
+                                        <rect key="frame" x="0.0" y="0.0" width="116" height="248"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="鍛冶種類" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHZ-Je-dbm" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="21.5" y="0.0" width="73.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="職人レベル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXx-dQ-kAp" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="12" y="43" width="92" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9d1-PZ-R7i" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="12" y="86" width="92" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="アイテム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izl-Ul-rqO" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="21.5" y="129" width="73.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コツ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuC-6W-hST" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="39.5" y="172" width="37" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="職人道具" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XAb-IP-X8K" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="21.5" y="215" width="73.5" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6gn-vn-bCm">
+                                        <rect key="frame" x="136" y="0.0" width="258" height="248"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOH-4V-qwl" customClass="SelectItemButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="258" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="HEl-4O-Mav" kind="show" identifier="craftsman" animates="NO" id="qTm-tq-TtU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeS-f8-9qE" customClass="SelectItemButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="43" width="258" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="HEl-4O-Mav" kind="show" identifier="level" animates="NO" id="0P7-ly-c4D"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z3z-pP-r97" customClass="SelectItemButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="86" width="258" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="HEl-4O-Mav" kind="show" identifier="category" animates="NO" id="2vl-tU-Y2p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlC-EV-S92" customClass="SelectItemButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="129" width="258" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="HEl-4O-Mav" kind="show" identifier="product" animates="NO" id="ryN-31-zuL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObQ-wm-ZHP" customClass="SelectItemButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="172" width="258" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="selectMaster:" destination="CVC-4s-EXR" eventType="touchUpInside" id="z36-oD-voq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nii-WF-yeh" customClass="SelectItemButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="215" width="258" height="33"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="MlQ-CU-YGc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <segue destination="HEl-4O-Mav" kind="show" identifier="tool" animates="NO" id="9tG-oh-gRb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ObQ-wm-ZHP" firstAttribute="height" secondItem="jOH-4V-qwl" secondAttribute="height" id="6Mq-K1-9Qk"/>
+                                            <constraint firstItem="XeS-f8-9qE" firstAttribute="height" secondItem="jOH-4V-qwl" secondAttribute="height" id="M5n-af-6RK"/>
+                                            <constraint firstItem="Z3z-pP-r97" firstAttribute="height" secondItem="jOH-4V-qwl" secondAttribute="height" id="Oiv-dr-4c4"/>
+                                            <constraint firstItem="nii-WF-yeh" firstAttribute="height" secondItem="jOH-4V-qwl" secondAttribute="height" id="QVv-OK-Qw2"/>
+                                            <constraint firstItem="UlC-EV-S92" firstAttribute="height" secondItem="jOH-4V-qwl" secondAttribute="height" id="spN-rm-QQa"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　成功率　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frg-jf-wif" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                <rect key="frame" x="30" y="439.5" width="87" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="firstBaseline" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mxN-ZA-YJr">
+                                <rect key="frame" x="50" y="470" width="314" height="81.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7nz-nL-eJ7">
+                                        <rect key="frame" x="0.0" y="0.0" width="149.5" height="81.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="v94-g2-jPC">
+                                                <rect key="frame" x="0.0" y="0.0" width="65" height="81.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqs-Xw-fWE" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jh9-ie-btS" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="30.5" width="65" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4E-Am-I0F" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="61" width="65" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hea-0a-Wc9">
+                                                <rect key="frame" x="85" y="0.0" width="64.5" height="81.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IQz-fD-96D">
+                                                        <rect key="frame" x="0.0" y="0.0" width="64.5" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlL-6L-P8h">
+                                                        <rect key="frame" x="0.0" y="29" width="64.5" height="23.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayJ-yY-CWw">
+                                                        <rect key="frame" x="0.0" y="57.5" width="64.5" height="24"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YZb-uT-KcG">
+                                        <rect key="frame" x="159.5" y="0.0" width="154.5" height="51"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pQ2-Nu-nQr">
+                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="51"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　なし" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJB-6c-gKf" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                        <rect key="frame" x="7.5" y="0.0" width="52" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　失敗" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdf-f7-vbO" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                        <rect key="frame" x="7.5" y="30.5" width="52" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="kXL-4Y-Io8">
+                                                <rect key="frame" x="87.5" y="0.0" width="67" height="51"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWj-Hg-hlQ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="67" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pht-QS-6Zv">
+                                                        <rect key="frame" x="0.0" y="28" width="67" height="23"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKs-7o-MON" customClass="SelectItemButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                <rect key="frame" x="50" y="561.5" width="314" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="u0w-7y-EkH" kind="show" animates="NO" id="1lw-Qy-Ksp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　1個あたりの作業時間　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3l-Qm-K8Y" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                <rect key="frame" x="30" y="614.5" width="198.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sva-3K-pTh" customClass="SelectItemButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                <rect key="frame" x="50" y="675.5" width="314" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="4QT-HG-Buf" kind="show" animates="NO" id="SZy-cc-MEw"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ekA-2f-aka">
+                                <rect key="frame" x="10" y="728.5" width="394" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3i-Dr-giA" customClass="PushButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="124.5" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0zA-cs-zdt"/>
+                                        </constraints>
+                                        <state key="normal" title="売上予測"/>
+                                        <connections>
+                                            <segue destination="Y6h-uz-SIR" kind="show" identifier="earnings" animates="NO" id="pgr-93-A6u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qc7-nc-oCy" customClass="PushButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                        <rect key="frame" x="134.5" y="0.0" width="125" height="50"/>
+                                        <state key="normal" title="本番"/>
+                                        <connections>
+                                            <segue destination="LU9-A2-jDi" kind="show" identifier="real" animates="NO" id="e18-md-2iS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWl-Vp-7oT" customClass="PushButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                        <rect key="frame" x="269.5" y="0.0" width="124.5" height="50"/>
+                                        <state key="normal" title="練習"/>
+                                        <connections>
+                                            <segue destination="Rcv-gW-Ujq" kind="show" identifier="practice" animates="NO" id="tX0-Iv-Hze"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m6I-0X-ceL">
+                                <rect key="frame" x="102" y="88" width="240" height="83.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ie-Hs-wXY">
+                                <rect key="frame" x="87" y="778.5" width="240" height="83.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="LcB-36-gVK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vd-Yf-6bW">
+                                <rect key="frame" x="50" y="645" width="314" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mx0-qU-shh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mx0-qU-shh" firstAttribute="trailing" secondItem="0vd-Yf-6bW" secondAttribute="trailing" constant="50" id="0z5-l4-xyW"/>
+                            <constraint firstItem="mx0-qU-shh" firstAttribute="trailing" secondItem="BKs-7o-MON" secondAttribute="trailing" constant="50" id="2rA-wp-ZF8"/>
+                            <constraint firstItem="mxN-ZA-YJr" firstAttribute="top" secondItem="frg-jf-wif" secondAttribute="bottom" constant="10" id="3gL-Fd-KFi"/>
+                            <constraint firstItem="3ie-Hs-wXY" firstAttribute="top" secondItem="ekA-2f-aka" secondAttribute="bottom" id="3nY-BP-l5E"/>
+                            <constraint firstItem="0vd-Yf-6bW" firstAttribute="top" secondItem="C3l-Qm-K8Y" secondAttribute="bottom" constant="10" id="4Tt-Se-TJ7"/>
+                            <constraint firstItem="Sva-3K-pTh" firstAttribute="top" secondItem="0vd-Yf-6bW" secondAttribute="bottom" constant="10" id="6rH-hV-F5D"/>
+                            <constraint firstItem="Sva-3K-pTh" firstAttribute="leading" secondItem="mx0-qU-shh" secondAttribute="leading" constant="50" id="6vq-Og-da9"/>
+                            <constraint firstItem="3ie-Hs-wXY" firstAttribute="height" secondItem="m6I-0X-ceL" secondAttribute="height" id="7DK-h0-rVm"/>
+                            <constraint firstItem="0vd-Yf-6bW" firstAttribute="leading" secondItem="mx0-qU-shh" secondAttribute="leading" constant="50" id="CYT-iS-yJN"/>
+                            <constraint firstItem="BKs-7o-MON" firstAttribute="height" secondItem="jOH-4V-qwl" secondAttribute="height" id="M1L-sA-13p"/>
+                            <constraint firstItem="05T-jC-oDN" firstAttribute="leading" secondItem="mx0-qU-shh" secondAttribute="leading" constant="10" id="OCk-WO-gCR"/>
+                            <constraint firstItem="BKs-7o-MON" firstAttribute="top" secondItem="mxN-ZA-YJr" secondAttribute="bottom" constant="10" id="OLY-2R-0Ga"/>
+                            <constraint firstItem="C3l-Qm-K8Y" firstAttribute="leading" secondItem="mx0-qU-shh" secondAttribute="leading" constant="30" id="TP7-v4-EmF"/>
+                            <constraint firstItem="C3l-Qm-K8Y" firstAttribute="top" secondItem="BKs-7o-MON" secondAttribute="bottom" constant="20" id="Utg-qx-6Wb"/>
+                            <constraint firstItem="mxN-ZA-YJr" firstAttribute="leading" secondItem="mx0-qU-shh" secondAttribute="leading" constant="50" id="aLl-Zv-2Cv"/>
+                            <constraint firstItem="frg-jf-wif" firstAttribute="leading" secondItem="mx0-qU-shh" secondAttribute="leading" constant="30" id="eUN-cX-Gdn"/>
+                            <constraint firstItem="ekA-2f-aka" firstAttribute="leading" secondItem="mx0-qU-shh" secondAttribute="leading" constant="10" id="fWe-uW-SgD"/>
+                            <constraint firstItem="m6I-0X-ceL" firstAttribute="top" secondItem="mx0-qU-shh" secondAttribute="top" id="gS4-sF-aP9"/>
+                            <constraint firstItem="BKs-7o-MON" firstAttribute="leading" secondItem="mx0-qU-shh" secondAttribute="leading" constant="50" id="hat-1o-CyJ"/>
+                            <constraint firstItem="frg-jf-wif" firstAttribute="top" secondItem="05T-jC-oDN" secondAttribute="bottom" constant="20" id="mGQ-Ec-aeT"/>
+                            <constraint firstItem="Sva-3K-pTh" firstAttribute="height" secondItem="jOH-4V-qwl" secondAttribute="height" id="nOd-LD-F0R"/>
+                            <constraint firstItem="mx0-qU-shh" firstAttribute="trailing" secondItem="Sva-3K-pTh" secondAttribute="trailing" constant="50" id="nSv-Dv-APX"/>
+                            <constraint firstItem="mx0-qU-shh" firstAttribute="trailing" secondItem="mxN-ZA-YJr" secondAttribute="trailing" constant="50" id="qJ6-3Z-gk8"/>
+                            <constraint firstItem="05T-jC-oDN" firstAttribute="top" secondItem="m6I-0X-ceL" secondAttribute="bottom" id="r83-no-GjS"/>
+                            <constraint firstItem="ekA-2f-aka" firstAttribute="top" secondItem="Sva-3K-pTh" secondAttribute="bottom" constant="20" id="rWM-jX-9IK"/>
+                            <constraint firstItem="mx0-qU-shh" firstAttribute="trailing" secondItem="ekA-2f-aka" secondAttribute="trailing" constant="10" id="uSQ-Hn-cAv"/>
+                            <constraint firstItem="3ie-Hs-wXY" firstAttribute="bottom" secondItem="mx0-qU-shh" secondAttribute="bottom" id="vle-zM-aJK"/>
+                            <constraint firstItem="mx0-qU-shh" firstAttribute="trailing" secondItem="05T-jC-oDN" secondAttribute="trailing" constant="10" id="xlq-X4-u9w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="作るものを選ぶ" id="0Mx-z4-fUZ"/>
+                    <connections>
+                        <outlet property="craftsmanTypeButton" destination="jOH-4V-qwl" id="WNl-gY-MpW"/>
+                        <outlet property="doubleLabel" destination="PlL-6L-P8h" id="gOZ-kg-jRf"/>
+                        <outlet property="failedLabel" destination="Pht-QS-6Zv" id="IN1-qW-MvO"/>
+                        <outlet property="levelButton" destination="XeS-f8-9qE" id="5Jf-f6-F1f"/>
+                        <outlet property="masterButton" destination="ObQ-wm-ZHP" id="Mvc-A6-2Re"/>
+                        <outlet property="noneLabel" destination="CWj-Hg-hlQ" id="0XS-8F-TG3"/>
+                        <outlet property="productButton" destination="UlC-EV-S92" id="Go5-Eh-wow"/>
+                        <outlet property="productCategoryButton" destination="Z3z-pP-r97" id="cI7-WT-zc7"/>
+                        <outlet property="rateLabel" destination="frg-jf-wif" id="7LN-VJ-Suf"/>
+                        <outlet property="referenceRateButton" destination="BKs-7o-MON" id="fvQ-Yf-16p"/>
+                        <outlet property="referenceTimeButton" destination="Sva-3K-pTh" id="S9F-bu-XSc"/>
+                        <outlet property="singleLabel" destination="ayJ-yY-CWw" id="umn-O0-7Z8"/>
+                        <outlet property="timeLabel" destination="0vd-Yf-6bW" id="BWu-pV-4qZ"/>
+                        <outlet property="timeTitleLabel" destination="C3l-Qm-K8Y" id="8Xb-zG-OeM"/>
+                        <outlet property="toolButton" destination="nii-WF-yeh" id="yjS-9y-fzd"/>
+                        <outlet property="tripleLabel" destination="IQz-fD-96D" id="KfS-Ol-u51"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eLQ-tx-BBL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198.5507246376812" y="-680.35714285714278"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="SJ3-gD-teb">
+            <objects>
+                <viewController id="3j1-mJ-V1t" customClass="MaterialBoardViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VD9-rs-rur">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dv3-vs-tI8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="ojT-t2-PYH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DwU-y1-1Ri" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5448" y="-935"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Upf-jl-GAv">
+            <objects>
+                <viewController id="O3r-Dh-1YE" customClass="MaterialSummaryViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MmJ-3h-3CH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EBh-o3-ewm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="yDc-Ga-UII"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30q-CO-aJ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4441" y="-935"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="dku-p6-vKQ">
+            <objects>
+                <viewController id="mG1-8T-JD2" customClass="MaterialTwitterViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dlh-fA-JpW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ch3-lR-qTj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Wjm-W4-Q9v"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="peP-8M-Un8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6504" y="-935"/>
+        </scene>
+        <!--Product Info View Controller-->
+        <scene sceneID="5AZ-rd-oMe">
+            <objects>
+                <viewController id="Y6h-uz-SIR" customClass="ProductInfoViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uJA-Z7-cqs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EW0-Kg-dSa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wHo-iO-WMT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tRg-8J-JGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306" y="-1725"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kDp-Pn-dDA">
+            <objects>
+                <tabBarController id="Tg9-Zo-SM3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jPG-QA-SGc"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GB4-X3-kgx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mG1-8T-JD2" kind="relationship" relationship="viewControllers" id="BQO-v8-tdV"/>
+                        <segue destination="3j1-mJ-V1t" kind="relationship" relationship="viewControllers" id="eBp-kb-xjM"/>
+                        <segue destination="O3r-Dh-1YE" kind="relationship" relationship="viewControllers" id="ahW-k2-Ika"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wbM-Ws-v3z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5448" y="-1725"/>
+        </scene>
+        <!--Real View Controller-->
+        <scene sceneID="Sve-Nx-ocj">
+            <objects>
+                <viewController id="LU9-A2-jDi" customClass="RealViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ls1-lg-BPc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="GRN-wU-mgN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bya-AM-aPb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TU4-AG-7gK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306" y="-1013"/>
+        </scene>
+        <!--Practice View Controller-->
+        <scene sceneID="azA-Q0-q5b">
+            <objects>
+                <viewController id="Rcv-gW-Ujq" customClass="PracticeViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n5Z-k9-fw4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4ut-Ev-aQA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a75-eO-Usj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H0J-jD-ZqU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3306" y="-333"/>
+        </scene>
+        <!--自分で設定する-->
+        <scene sceneID="Uq4-73-lDL">
+            <objects>
+                <viewController id="Chj-Uc-g8l" customClass="CustomSummaryViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MD1-Dm-MRl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D95-cn-pKy" customClass="PushButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                <rect key="frame" x="10" y="98" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vVZ-lZ-dmv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="新しく設定する">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="B0U-OJ-bwQ" kind="show" animates="NO" id="Pr9-4Q-9an"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QBd-Vz-2At">
+                                <rect key="frame" x="10" y="158" width="394" height="685"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VLC-D9-XQx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VLC-D9-XQx" firstAttribute="trailing" secondItem="D95-cn-pKy" secondAttribute="trailing" constant="10" id="Dpj-sQ-l5l"/>
+                            <constraint firstItem="D95-cn-pKy" firstAttribute="leading" secondItem="VLC-D9-XQx" secondAttribute="leading" constant="10" id="Ncb-S2-X0X"/>
+                            <constraint firstItem="VLC-D9-XQx" firstAttribute="bottom" secondItem="QBd-Vz-2At" secondAttribute="bottom" constant="19" id="UsK-X8-mi2"/>
+                            <constraint firstItem="QBd-Vz-2At" firstAttribute="leading" secondItem="VLC-D9-XQx" secondAttribute="leading" constant="10" id="ZqY-JJ-W2x"/>
+                            <constraint firstItem="VLC-D9-XQx" firstAttribute="trailing" secondItem="QBd-Vz-2At" secondAttribute="trailing" constant="10" id="b4e-Bq-ONT"/>
+                            <constraint firstItem="D95-cn-pKy" firstAttribute="top" secondItem="VLC-D9-XQx" secondAttribute="top" constant="10" id="eNq-nn-kNh"/>
+                            <constraint firstItem="QBd-Vz-2At" firstAttribute="top" secondItem="D95-cn-pKy" secondAttribute="bottom" constant="10" id="qbM-V2-Jrl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="自分で設定する" id="sUR-UY-7UV"/>
+                    <connections>
+                        <outlet property="newCustomButton" destination="D95-cn-pKy" id="gmO-Ne-oDS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DiW-hI-hRj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1198.5507246376812" y="73.660714285714278"/>
+        </scene>
+        <!--自分で設定する-->
+        <scene sceneID="R3j-1J-E1m">
+            <objects>
+                <viewController id="B0U-OJ-bwQ" customClass="CustomDetailViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E5K-op-wUI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t1u-lu-sAv">
+                                <rect key="frame" x="10" y="186" width="394" height="546"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jhc-sk-IBv">
+                                    <size key="itemSize" width="224" height="158"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="52" translatesAutoresizingMaskIntoConstraints="NO" id="53X-74-CQT">
+                                <rect key="frame" x="10" y="98" width="394" height="78"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IhY-ET-kVb">
+                                        <rect key="frame" x="0.0" y="0.0" width="35" height="78"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUn-7b-ogE" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地金" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEA-LG-2dV" customClass="TitleLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44" width="35" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="azA-GQ-CbE">
+                                        <rect key="frame" x="87" y="0.0" width="307" height="78"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bv-V3-oDC" customClass="DesignedTextField" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="307" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugl-x5-HF0" customClass="SelectItemButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44" width="307" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="upe-Mo-Iyd">
+                                <rect key="frame" x="87" y="88" width="240" height="10"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="jjg-3E-RmX"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txd-i1-htW" customClass="PushButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                <rect key="frame" x="10" y="742" width="394" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="6Tf-Fn-plb"/>
+                                    <constraint firstAttribute="height" constant="50" id="Med-mv-EFw"/>
+                                </constraints>
+                                <state key="normal" title="数値をリセットする"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kgF-Q5-s0O">
+                                <rect key="frame" x="10" y="802" width="394" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8R-Mr-lcE" customClass="PushButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="192" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kcX-kf-Rem"/>
+                                        </constraints>
+                                        <state key="normal" title="本番"/>
+                                        <connections>
+                                            <segue destination="LU9-A2-jDi" kind="show" animates="NO" id="jAR-gf-q6z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDZ-1t-Pf6" customClass="PushButton" customModule="DQX_Blacksmith" customModuleProvider="target">
+                                        <rect key="frame" x="202" y="0.0" width="192" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="eNR-4S-L7d"/>
+                                        </constraints>
+                                        <state key="normal" title="練習"/>
+                                        <connections>
+                                            <segue destination="Rcv-gW-Ujq" kind="show" animates="NO" id="adz-m1-n9p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yz1-xe-0cU">
+                                <rect key="frame" x="87" y="852" width="240" height="10"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="ehd-wl-rRx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CIF-37-Jjs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CIF-37-Jjs" firstAttribute="trailing" secondItem="53X-74-CQT" secondAttribute="trailing" constant="10" id="0oo-iW-C1p"/>
+                            <constraint firstItem="kgF-Q5-s0O" firstAttribute="leading" secondItem="CIF-37-Jjs" secondAttribute="leading" constant="10" id="2om-L9-qVA"/>
+                            <constraint firstItem="yz1-xe-0cU" firstAttribute="top" secondItem="kgF-Q5-s0O" secondAttribute="bottom" id="ArM-JZ-gNa"/>
+                            <constraint firstItem="CIF-37-Jjs" firstAttribute="trailing" secondItem="t1u-lu-sAv" secondAttribute="trailing" constant="10" id="BBc-xj-JW7"/>
+                            <constraint firstItem="txd-i1-htW" firstAttribute="leading" secondItem="CIF-37-Jjs" secondAttribute="leading" constant="10" id="CVp-uZ-3Og"/>
+                            <constraint firstItem="CIF-37-Jjs" firstAttribute="bottom" secondItem="yz1-xe-0cU" secondAttribute="bottom" id="JFF-ul-6M1"/>
+                            <constraint firstItem="t1u-lu-sAv" firstAttribute="top" secondItem="53X-74-CQT" secondAttribute="bottom" constant="10" id="KZ5-SW-m94"/>
+                            <constraint firstItem="53X-74-CQT" firstAttribute="leading" secondItem="CIF-37-Jjs" secondAttribute="leading" constant="10" id="Mym-6k-ebH"/>
+                            <constraint firstItem="yz1-xe-0cU" firstAttribute="height" secondItem="upe-Mo-Iyd" secondAttribute="height" id="NPe-Jd-8Vw"/>
+                            <constraint firstItem="txd-i1-htW" firstAttribute="top" secondItem="t1u-lu-sAv" secondAttribute="bottom" constant="10" id="Nl2-Rk-k79"/>
+                            <constraint firstItem="53X-74-CQT" firstAttribute="top" secondItem="upe-Mo-Iyd" secondAttribute="bottom" id="TnV-rr-ZYL"/>
+                            <constraint firstItem="kgF-Q5-s0O" firstAttribute="top" secondItem="txd-i1-htW" secondAttribute="bottom" constant="10" id="X1n-CW-bRU"/>
+                            <constraint firstItem="t1u-lu-sAv" firstAttribute="leading" secondItem="CIF-37-Jjs" secondAttribute="leading" constant="10" id="lU5-3O-Ydx"/>
+                            <constraint firstItem="CIF-37-Jjs" firstAttribute="trailing" secondItem="kgF-Q5-s0O" secondAttribute="trailing" constant="10" id="n0C-jq-YFs"/>
+                            <constraint firstItem="CIF-37-Jjs" firstAttribute="trailing" secondItem="txd-i1-htW" secondAttribute="trailing" constant="10" id="qpL-86-cHy"/>
+                            <constraint firstItem="upe-Mo-Iyd" firstAttribute="top" secondItem="CIF-37-Jjs" secondAttribute="top" id="swk-Rn-ihp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="自分で設定する" id="IC7-21-7af"/>
+                    <connections>
+                        <outlet property="collectionView" destination="t1u-lu-sAv" id="KF6-z3-oJs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CF7-ld-tC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2075.36231884058" y="73.660714285714278"/>
+        </scene>
+        <!--お問い合わせ-->
+        <scene sceneID="iQ7-dD-sL0">
+            <objects>
+                <viewController id="HGi-6n-S3S" customClass="InquiryViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qaF-C2-Cdg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KgA-2X-mf8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="お問い合わせ" id="Aea-Wq-3Cf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K6a-El-BXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-623" y="335"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="e7M-V7-hdV">
+            <objects>
+                <viewController id="pcB-Lu-cRu" customClass="SettingViewController" customModule="DQX_Blacksmith" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BcH-AP-cpi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Au-e6-MjK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="設定" id="vfo-EH-rM9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="axf-KO-O0b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="335"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tX0-Iv-Hze"/>
+        <segue reference="e18-md-2iS"/>
+        <segue reference="0P7-ly-c4D"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

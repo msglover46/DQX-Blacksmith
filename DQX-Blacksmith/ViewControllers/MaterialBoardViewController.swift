@@ -1,19 +1,18 @@
 //
-//  ViewController.swift
+//  MaterialBoardViewController.swift
 //  DQX-Blacksmith
 //
-//  Created by 三輪駿 on 2020/12/26.
+//  Created by 三輪駿 on 2020/12/31.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class MaterialBoardViewController: CommonMaterialViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
 
-
 }
-

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="customCell" id="gTV-IL-0wX" customClass="CustomProductCollectionViewCell" customModule="DQX_Blacksmith" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="167" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="167" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lxy-KU-ZFy" customClass="Gauge" customModule="DQX_Blacksmith" customModuleProvider="target">
+                        <rect key="frame" x="10" y="64.5" width="147" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Lxy-KU-ZFy" secondAttribute="height" multiplier="52:7" id="JDV-Fa-WPB"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ar-Y6-Qnl">
+                        <rect key="frame" x="0.0" y="84" width="167" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="3KU-Gw-iIo"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pkk-r5-YMR" customClass="StandardValueLabel" customModule="DQX_Blacksmith" customModuleProvider="target">
+                        <rect key="frame" x="45.5" y="16" width="76" height="38.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="klD-jT-ViK">
+                        <rect key="frame" x="0.0" y="0.0" width="167" height="16"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="7Ar-Y6-Qnl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3Yi-lH-SV9"/>
+                <constraint firstAttribute="trailing" secondItem="7Ar-Y6-Qnl" secondAttribute="trailing" id="7Cp-cJ-Gj7"/>
+                <constraint firstItem="Pkk-r5-YMR" firstAttribute="top" secondItem="klD-jT-ViK" secondAttribute="bottom" id="8u2-Be-gjX"/>
+                <constraint firstItem="klD-jT-ViK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="91m-6I-VTd"/>
+                <constraint firstItem="Pkk-r5-YMR" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="MLt-AW-1Or"/>
+                <constraint firstItem="klD-jT-ViK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XtH-qH-DWu"/>
+                <constraint firstAttribute="trailing" secondItem="klD-jT-ViK" secondAttribute="trailing" id="Zon-Qi-Ndb"/>
+                <constraint firstAttribute="trailing" secondItem="Lxy-KU-ZFy" secondAttribute="trailing" constant="10" id="ZxG-dm-5GD"/>
+                <constraint firstItem="7Ar-Y6-Qnl" firstAttribute="height" secondItem="klD-jT-ViK" secondAttribute="height" id="epI-In-pm8"/>
+                <constraint firstAttribute="bottom" secondItem="7Ar-Y6-Qnl" secondAttribute="bottom" id="fdi-gg-hia"/>
+                <constraint firstItem="Lxy-KU-ZFy" firstAttribute="top" secondItem="Pkk-r5-YMR" secondAttribute="bottom" constant="10" id="jkh-59-bsu"/>
+                <constraint firstItem="7Ar-Y6-Qnl" firstAttribute="top" secondItem="Lxy-KU-ZFy" secondAttribute="bottom" id="kLD-vG-S5Q"/>
+                <constraint firstItem="Lxy-KU-ZFy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="nHa-C9-Kzc"/>
+            </constraints>
+            <size key="customSize" width="167" height="100"/>
+            <connections>
+                <outlet property="gauge" destination="Lxy-KU-ZFy" id="pX8-1e-Dhj"/>
+                <outlet property="standardLabel" destination="Pkk-r5-YMR" id="bEh-h2-AYe"/>
+            </connections>
+            <point key="canvasLocation" x="47.10144927536232" y="100.44642857142857"/>
+        </collectionViewCell>
+    </objects>
+</document>

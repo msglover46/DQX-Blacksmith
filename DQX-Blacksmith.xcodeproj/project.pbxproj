@@ -8,27 +8,108 @@
 
 /* Begin PBXBuildFile section */
 		04348765A4B4B96A22BBC1A5 /* Pods_DQX_Blacksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7C49B9CB67F05FF6837935 /* Pods_DQX_Blacksmith.framework */; };
+		A424BD8E259B707000EA0757 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424BD8D259B707000EA0757 /* NavigationController.swift */; };
+		A424BD91259B755C00EA0757 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424BD90259B755C00EA0757 /* ProductViewController.swift */; };
+		A424BDA1259D08F700EA0757 /* CustomSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424BDA0259D08F700EA0757 /* CustomSummaryViewController.swift */; };
+		A42700AA25BE6A5C00C9DE17 /* SettingRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42700A925BE6A5C00C9DE17 /* SettingRateViewController.swift */; };
+		A42700AD25BE6A8500C9DE17 /* SettingTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42700AC25BE6A8500C9DE17 /* SettingTimeViewController.swift */; };
+		A42723CD25983BB300AA689B /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42723CC25983BB300AA689B /* Const.swift */; };
+		A44FCF0C259DB530009D186F /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF0B259DB530009D186F /* CommonViewController.swift */; };
+		A44FCF10259DC117009D186F /* CustomDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF0F259DC117009D186F /* CustomDetailViewController.swift */; };
+		A44FCF14259DCA7B009D186F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF13259DCA7B009D186F /* SettingViewController.swift */; };
+		A44FCF17259DCA9D009D186F /* InquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF16259DCA9D009D186F /* InquiryViewController.swift */; };
+		A44FCF1A259DCC29009D186F /* CommonMaterialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF19259DCC29009D186F /* CommonMaterialViewController.swift */; };
+		A44FCF1E259DCC3E009D186F /* CommonProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF1D259DCC3E009D186F /* CommonProductViewController.swift */; };
+		A44FCF21259DCC64009D186F /* MaterialSummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF20259DCC64009D186F /* MaterialSummaryViewController.swift */; };
+		A44FCF24259DCC74009D186F /* MaterialTwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF23259DCC74009D186F /* MaterialTwitterViewController.swift */; };
+		A44FCF27259DCC83009D186F /* MaterialBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF26259DCC83009D186F /* MaterialBoardViewController.swift */; };
+		A44FCF2A259DCC9C009D186F /* ProductInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF29259DCC9C009D186F /* ProductInfoViewController.swift */; };
+		A44FCF2D259DCCDD009D186F /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF2C259DCCDD009D186F /* PracticeViewController.swift */; };
+		A44FCF30259DCCEA009D186F /* RealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF2F259DCCEA009D186F /* RealViewController.swift */; };
+		A44FCF35259DCDE1009D186F /* CommonBlackSmithViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF34259DCDE1009D186F /* CommonBlackSmithViewController.swift */; };
+		A44FCF3F259E0986009D186F /* SelectItemButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF3E259E0986009D186F /* SelectItemButton.swift */; };
+		A44FCF44259E2A41009D186F /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF43259E2A40009D186F /* PushButton.swift */; };
+		A44FCF4B259E3B6A009D186F /* TitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44FCF4A259E3B6A009D186F /* TitleLabel.swift */; };
+		A490F8EC25B498C900F0EFF6 /* SettingProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490F8EB25B498C900F0EFF6 /* SettingProductViewController.swift */; };
+		A490F8EF25B4A07200F0EFF6 /* SettingProductTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A490F8EE25B4A07200F0EFF6 /* SettingProductTableView.swift */; };
+		A49652FD259ECAA0004F210A /* SubButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49652FC259ECAA0004F210A /* SubButton.swift */; };
+		A4965301259ED895004F210A /* DesignedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4965300259ED895004F210A /* DesignedTextField.swift */; };
+		A496530D259EDFA3004F210A /* RoundBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496530C259EDFA3004F210A /* RoundBorderView.swift */; };
+		A496532425A09967004F210A /* Gauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496532325A09967004F210A /* Gauge.swift */; };
+		A496532725A09A6F004F210A /* StandardValueLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496532625A09A6F004F210A /* StandardValueLabel.swift */; };
+		A496533625A1BA8F004F210A /* CustomProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496533425A1BA8F004F210A /* CustomProductCollectionViewCell.swift */; };
+		A496533725A1BA8F004F210A /* CustomProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A496533525A1BA8F004F210A /* CustomProductCollectionViewCell.xib */; };
+		A496533C25A2552E004F210A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496533B25A2552D004F210A /* TabBarController.swift */; };
 		A4FFD6C72597553C00D138C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD6C62597553C00D138C0 /* AppDelegate.swift */; };
 		A4FFD6C92597553C00D138C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD6C82597553C00D138C0 /* SceneDelegate.swift */; };
-		A4FFD6CB2597553C00D138C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD6CA2597553C00D138C0 /* ViewController.swift */; };
+		A4FFD6CB2597553C00D138C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD6CA2597553C00D138C0 /* HomeViewController.swift */; };
 		A4FFD6CE2597553C00D138C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4FFD6CC2597553C00D138C0 /* Main.storyboard */; };
 		A4FFD6D02597553C00D138C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4FFD6CF2597553C00D138C0 /* Assets.xcassets */; };
 		A4FFD6D32597553C00D138C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4FFD6D12597553C00D138C0 /* LaunchScreen.storyboard */; };
 		A4FFD6DC259758A800D138C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4FFD6DB259758A800D138C0 /* GoogleService-Info.plist */; };
+		A4FFD73F2597637F00D138C0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD73E2597637F00D138C0 /* Product.swift */; };
+		A4FFD75925978A8A00D138C0 /* CustomProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD75825978A8A00D138C0 /* CustomProduct.swift */; };
+		A4FFD75C25978B7400D138C0 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD75B25978B7400D138C0 /* Level.swift */; };
+		A4FFD7622597970000D138C0 /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD7612597970000D138C0 /* Material.swift */; };
+		A4FFD765259797EC00D138C0 /* MaterialBookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD764259797EC00D138C0 /* MaterialBookmark.swift */; };
+		A4FFD769259798F700D138C0 /* Tool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD768259798F700D138C0 /* Tool.swift */; };
+		A4FFD76C2597A02B00D138C0 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD76B2597A02B00D138C0 /* Category.swift */; };
+		A4FFD76F2597A50E00D138C0 /* Blacksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD76E2597A50E00D138C0 /* Blacksmith.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		168744AB44959BF9AE1D3190 /* Pods-DQX-Blacksmith.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQX-Blacksmith.release.xcconfig"; path = "Target Support Files/Pods-DQX-Blacksmith/Pods-DQX-Blacksmith.release.xcconfig"; sourceTree = "<group>"; };
 		8AC3C04C2AEAF11C27A148CB /* Pods-DQX-Blacksmith.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQX-Blacksmith.debug.xcconfig"; path = "Target Support Files/Pods-DQX-Blacksmith/Pods-DQX-Blacksmith.debug.xcconfig"; sourceTree = "<group>"; };
+		A424BD8D259B707000EA0757 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		A424BD90259B755C00EA0757 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		A424BDA0259D08F700EA0757 /* CustomSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSummaryViewController.swift; sourceTree = "<group>"; };
+		A42700A925BE6A5C00C9DE17 /* SettingRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRateViewController.swift; sourceTree = "<group>"; };
+		A42700AC25BE6A8500C9DE17 /* SettingTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTimeViewController.swift; sourceTree = "<group>"; };
+		A42723CC25983BB300AA689B /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		A42723E825988D5A00AA689B /* DQX-Blacksmith-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DQX-Blacksmith-Bridging-Header.h"; sourceTree = "<group>"; };
+		A44FCF0B259DB530009D186F /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
+		A44FCF0F259DC117009D186F /* CustomDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDetailViewController.swift; sourceTree = "<group>"; };
+		A44FCF13259DCA7B009D186F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		A44FCF16259DCA9D009D186F /* InquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InquiryViewController.swift; sourceTree = "<group>"; };
+		A44FCF19259DCC29009D186F /* CommonMaterialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonMaterialViewController.swift; sourceTree = "<group>"; };
+		A44FCF1D259DCC3E009D186F /* CommonProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonProductViewController.swift; sourceTree = "<group>"; };
+		A44FCF20259DCC64009D186F /* MaterialSummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialSummaryViewController.swift; sourceTree = "<group>"; };
+		A44FCF23259DCC74009D186F /* MaterialTwitterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTwitterViewController.swift; sourceTree = "<group>"; };
+		A44FCF26259DCC83009D186F /* MaterialBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialBoardViewController.swift; sourceTree = "<group>"; };
+		A44FCF29259DCC9C009D186F /* ProductInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductInfoViewController.swift; sourceTree = "<group>"; };
+		A44FCF2C259DCCDD009D186F /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		A44FCF2F259DCCEA009D186F /* RealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealViewController.swift; sourceTree = "<group>"; };
+		A44FCF34259DCDE1009D186F /* CommonBlackSmithViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonBlackSmithViewController.swift; sourceTree = "<group>"; };
+		A44FCF3E259E0986009D186F /* SelectItemButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectItemButton.swift; sourceTree = "<group>"; };
+		A44FCF43259E2A40009D186F /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
+		A44FCF4A259E3B6A009D186F /* TitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleLabel.swift; sourceTree = "<group>"; };
+		A490F8EB25B498C900F0EFF6 /* SettingProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProductViewController.swift; sourceTree = "<group>"; };
+		A490F8EE25B4A07200F0EFF6 /* SettingProductTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProductTableView.swift; sourceTree = "<group>"; };
+		A49652FC259ECAA0004F210A /* SubButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubButton.swift; sourceTree = "<group>"; };
+		A4965300259ED895004F210A /* DesignedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignedTextField.swift; sourceTree = "<group>"; };
+		A496530C259EDFA3004F210A /* RoundBorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBorderView.swift; sourceTree = "<group>"; };
+		A496532325A09967004F210A /* Gauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gauge.swift; sourceTree = "<group>"; };
+		A496532625A09A6F004F210A /* StandardValueLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardValueLabel.swift; sourceTree = "<group>"; };
+		A496533425A1BA8F004F210A /* CustomProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		A496533525A1BA8F004F210A /* CustomProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		A496533B25A2552D004F210A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		A4FFD6C32597553C00D138C0 /* DQX-Blacksmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DQX-Blacksmith.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FFD6C62597553C00D138C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4FFD6C82597553C00D138C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4FFD6CA2597553C00D138C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A4FFD6CA2597553C00D138C0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A4FFD6CD2597553C00D138C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4FFD6CF2597553C00D138C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4FFD6D22597553C00D138C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4FFD6D42597553C00D138C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4FFD6DB259758A800D138C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A4FFD73E2597637F00D138C0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		A4FFD75825978A8A00D138C0 /* CustomProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProduct.swift; sourceTree = "<group>"; };
+		A4FFD75B25978B7400D138C0 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		A4FFD7612597970000D138C0 /* Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		A4FFD764259797EC00D138C0 /* MaterialBookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialBookmark.swift; sourceTree = "<group>"; };
+		A4FFD768259798F700D138C0 /* Tool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tool.swift; sourceTree = "<group>"; };
+		A4FFD76B2597A02B00D138C0 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		A4FFD76E2597A50E00D138C0 /* Blacksmith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blacksmith.swift; sourceTree = "<group>"; };
 		EA7C49B9CB67F05FF6837935 /* Pods_DQX_Blacksmith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DQX_Blacksmith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -61,6 +142,106 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A44FCF37259DCEAC009D186F /* RealmData */ = {
+			isa = PBXGroup;
+			children = (
+				A4FFD73E2597637F00D138C0 /* Product.swift */,
+				A4FFD75825978A8A00D138C0 /* CustomProduct.swift */,
+				A4FFD75B25978B7400D138C0 /* Level.swift */,
+				A4FFD7612597970000D138C0 /* Material.swift */,
+				A4FFD764259797EC00D138C0 /* MaterialBookmark.swift */,
+				A4FFD768259798F700D138C0 /* Tool.swift */,
+				A4FFD76B2597A02B00D138C0 /* Category.swift */,
+				A4FFD76E2597A50E00D138C0 /* Blacksmith.swift */,
+			);
+			path = RealmData;
+			sourceTree = "<group>";
+		};
+		A44FCF38259DCEDB009D186F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A44FCF0B259DB530009D186F /* CommonViewController.swift */,
+				A4FFD6CA2597553C00D138C0 /* HomeViewController.swift */,
+				A424BD90259B755C00EA0757 /* ProductViewController.swift */,
+				A490F8EB25B498C900F0EFF6 /* SettingProductViewController.swift */,
+				A42700A925BE6A5C00C9DE17 /* SettingRateViewController.swift */,
+				A42700AC25BE6A8500C9DE17 /* SettingTimeViewController.swift */,
+				A424BDA0259D08F700EA0757 /* CustomSummaryViewController.swift */,
+				A44FCF0F259DC117009D186F /* CustomDetailViewController.swift */,
+				A44FCF19259DCC29009D186F /* CommonMaterialViewController.swift */,
+				A44FCF20259DCC64009D186F /* MaterialSummaryViewController.swift */,
+				A44FCF23259DCC74009D186F /* MaterialTwitterViewController.swift */,
+				A44FCF26259DCC83009D186F /* MaterialBoardViewController.swift */,
+				A44FCF1D259DCC3E009D186F /* CommonProductViewController.swift */,
+				A44FCF29259DCC9C009D186F /* ProductInfoViewController.swift */,
+				A44FCF34259DCDE1009D186F /* CommonBlackSmithViewController.swift */,
+				A44FCF2C259DCCDD009D186F /* PracticeViewController.swift */,
+				A44FCF2F259DCCEA009D186F /* RealViewController.swift */,
+				A44FCF16259DCA9D009D186F /* InquiryViewController.swift */,
+				A44FCF13259DCA7B009D186F /* SettingViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A44FCF48259E3808009D186F /* Parts */ = {
+			isa = PBXGroup;
+			children = (
+				A496532925A09CE7004F210A /* Button */,
+				A496532A25A09CF8004F210A /* Label */,
+				A496532B25A09D13004F210A /* Cell */,
+				A496532C25A09D30004F210A /* Others */,
+			);
+			path = Parts;
+			sourceTree = "<group>";
+		};
+		A4965304259ED9FB004F210A /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				A4FFD6CC2597553C00D138C0 /* Main.storyboard */,
+				A496533525A1BA8F004F210A /* CustomProductCollectionViewCell.xib */,
+				A4FFD6D12597553C00D138C0 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		A496532925A09CE7004F210A /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				A44FCF3E259E0986009D186F /* SelectItemButton.swift */,
+				A44FCF43259E2A40009D186F /* PushButton.swift */,
+				A49652FC259ECAA0004F210A /* SubButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		A496532A25A09CF8004F210A /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				A44FCF4A259E3B6A009D186F /* TitleLabel.swift */,
+				A496532625A09A6F004F210A /* StandardValueLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		A496532B25A09D13004F210A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A496533425A1BA8F004F210A /* CustomProductCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A496532C25A09D30004F210A /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				A496530C259EDFA3004F210A /* RoundBorderView.swift */,
+				A490F8EE25B4A07200F0EFF6 /* SettingProductTableView.swift */,
+				A4965300259ED895004F210A /* DesignedTextField.swift */,
+				A496532325A09967004F210A /* Gauge.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		A4FFD6BA2597553C00D138C0 = {
 			isa = PBXGroup;
 			children = (
@@ -82,14 +263,19 @@
 		A4FFD6C52597553C00D138C0 /* DQX-Blacksmith */ = {
 			isa = PBXGroup;
 			children = (
+				A42723CC25983BB300AA689B /* Const.swift */,
 				A4FFD6C62597553C00D138C0 /* AppDelegate.swift */,
 				A4FFD6C82597553C00D138C0 /* SceneDelegate.swift */,
-				A4FFD6CA2597553C00D138C0 /* ViewController.swift */,
-				A4FFD6CC2597553C00D138C0 /* Main.storyboard */,
+				A424BD8D259B707000EA0757 /* NavigationController.swift */,
+				A496533B25A2552D004F210A /* TabBarController.swift */,
+				A44FCF37259DCEAC009D186F /* RealmData */,
+				A44FCF38259DCEDB009D186F /* ViewControllers */,
+				A44FCF48259E3808009D186F /* Parts */,
+				A4965304259ED9FB004F210A /* StoryBoards */,
 				A4FFD6CF2597553C00D138C0 /* Assets.xcassets */,
-				A4FFD6D12597553C00D138C0 /* LaunchScreen.storyboard */,
 				A4FFD6D42597553C00D138C0 /* Info.plist */,
 				A4FFD6DB259758A800D138C0 /* GoogleService-Info.plist */,
+				A42723E825988D5A00AA689B /* DQX-Blacksmith-Bridging-Header.h */,
 			);
 			path = "DQX-Blacksmith";
 			sourceTree = "<group>";
@@ -127,6 +313,7 @@
 				TargetAttributes = {
 					A4FFD6C22597553C00D138C0 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -153,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A496533725A1BA8F004F210A /* CustomProductCollectionViewCell.xib in Resources */,
 				A4FFD6D32597553C00D138C0 /* LaunchScreen.storyboard in Resources */,
 				A4FFD6DC259758A800D138C0 /* GoogleService-Info.plist in Resources */,
 				A4FFD6D02597553C00D138C0 /* Assets.xcassets in Resources */,
@@ -209,9 +397,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4FFD6CB2597553C00D138C0 /* ViewController.swift in Sources */,
+				A4FFD7622597970000D138C0 /* Material.swift in Sources */,
+				A44FCF27259DCC83009D186F /* MaterialBoardViewController.swift in Sources */,
+				A44FCF17259DCA9D009D186F /* InquiryViewController.swift in Sources */,
+				A44FCF10259DC117009D186F /* CustomDetailViewController.swift in Sources */,
+				A496532725A09A6F004F210A /* StandardValueLabel.swift in Sources */,
+				A44FCF2D259DCCDD009D186F /* PracticeViewController.swift in Sources */,
+				A496533625A1BA8F004F210A /* CustomProductCollectionViewCell.swift in Sources */,
+				A42700AA25BE6A5C00C9DE17 /* SettingRateViewController.swift in Sources */,
+				A490F8EC25B498C900F0EFF6 /* SettingProductViewController.swift in Sources */,
+				A44FCF35259DCDE1009D186F /* CommonBlackSmithViewController.swift in Sources */,
+				A44FCF30259DCCEA009D186F /* RealViewController.swift in Sources */,
+				A4FFD75C25978B7400D138C0 /* Level.swift in Sources */,
+				A496530D259EDFA3004F210A /* RoundBorderView.swift in Sources */,
+				A44FCF1E259DCC3E009D186F /* CommonProductViewController.swift in Sources */,
+				A424BD91259B755C00EA0757 /* ProductViewController.swift in Sources */,
+				A44FCF2A259DCC9C009D186F /* ProductInfoViewController.swift in Sources */,
+				A49652FD259ECAA0004F210A /* SubButton.swift in Sources */,
+				A44FCF24259DCC74009D186F /* MaterialTwitterViewController.swift in Sources */,
+				A44FCF4B259E3B6A009D186F /* TitleLabel.swift in Sources */,
+				A4FFD769259798F700D138C0 /* Tool.swift in Sources */,
+				A44FCF0C259DB530009D186F /* CommonViewController.swift in Sources */,
+				A44FCF3F259E0986009D186F /* SelectItemButton.swift in Sources */,
+				A44FCF1A259DCC29009D186F /* CommonMaterialViewController.swift in Sources */,
+				A44FCF21259DCC64009D186F /* MaterialSummaryViewController.swift in Sources */,
+				A4965301259ED895004F210A /* DesignedTextField.swift in Sources */,
+				A4FFD6CB2597553C00D138C0 /* HomeViewController.swift in Sources */,
+				A424BD8E259B707000EA0757 /* NavigationController.swift in Sources */,
+				A490F8EF25B4A07200F0EFF6 /* SettingProductTableView.swift in Sources */,
 				A4FFD6C72597553C00D138C0 /* AppDelegate.swift in Sources */,
+				A496533C25A2552E004F210A /* TabBarController.swift in Sources */,
+				A496532425A09967004F210A /* Gauge.swift in Sources */,
+				A44FCF44259E2A41009D186F /* PushButton.swift in Sources */,
+				A4FFD75925978A8A00D138C0 /* CustomProduct.swift in Sources */,
 				A4FFD6C92597553C00D138C0 /* SceneDelegate.swift in Sources */,
+				A4FFD765259797EC00D138C0 /* MaterialBookmark.swift in Sources */,
+				A4FFD76F2597A50E00D138C0 /* Blacksmith.swift in Sources */,
+				A42700AD25BE6A8500C9DE17 /* SettingTimeViewController.swift in Sources */,
+				A424BDA1259D08F700EA0757 /* CustomSummaryViewController.swift in Sources */,
+				A4FFD73F2597637F00D138C0 /* Product.swift in Sources */,
+				A44FCF14259DCA7B009D186F /* SettingViewController.swift in Sources */,
+				A4FFD76C2597A02B00D138C0 /* Category.swift in Sources */,
+				A42723CD25983BB300AA689B /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +501,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -335,6 +563,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -359,6 +588,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z36HZ8PUCD;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
@@ -370,6 +600,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.techacademy.msglover46.DQX-Blacksmith";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DQX-Blacksmith/DQX-Blacksmith-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -381,9 +613,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z36HZ8PUCD;
-				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "DQX-Blacksmith/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -392,6 +624,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.techacademy.msglover46.DQX-Blacksmith";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DQX-Blacksmith/DQX-Blacksmith-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -10,4 +10,8 @@ target 'DQX-Blacksmith' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
+  pod 'RealmSwift','5.1.0'
+  pod 'AutoScrollLabel'
+  pod 'MaterialComponents'
 end
