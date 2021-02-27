@@ -212,6 +212,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - Alamofire (5.4.1)
   - AutoScrollLabel (0.4.3)
   - BoringSSL-GRPC (0.0.7):
     - BoringSSL-GRPC/Implementation (= 0.0.7)
@@ -328,7 +329,9 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.5.0)
+  - Kanna (5.2.4)
   - leveldb-library (1.22)
+  - mailcore2-ios (0.6.4)
   - MaterialComponents (119.3.0):
     - MaterialComponents/ActionSheet (= 119.3.0)
     - "MaterialComponents/ActionSheet+Theming (= 119.3.0)"
@@ -975,25 +978,37 @@ PODS:
   - nanopb/decode (1.30905.0)
   - nanopb/encode (1.30905.0)
   - PromisesObjC (1.2.11)
+  - R.swift (5.3.1):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
   - Realm (5.1.0):
     - Realm/Headers (= 5.1.0)
   - Realm/Headers (5.1.0)
   - RealmSwift (5.1.0):
     - Realm (= 5.1.0)
+  - SVProgressHUD (2.2.5)
+  - TPKeyboardAvoiding (1.3.5)
 
 DEPENDENCIES:
+  - Alamofire
   - AutoScrollLabel
   - Firebase (= 6.27.0)
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Firestore
   - FirebaseFirestoreSwift
+  - Kanna
+  - mailcore2-ios
   - MaterialComponents
+  - R.swift
   - RealmSwift (= 5.1.0)
+  - SVProgressHUD
+  - TPKeyboardAvoiding
 
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
     - AutoScrollLabel
     - BoringSSL-GRPC
     - Firebase
@@ -1010,7 +1025,9 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - Kanna
     - leveldb-library
+    - mailcore2-ios
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
@@ -1018,11 +1035,16 @@ SPEC REPOS:
     - MotionInterchange
     - nanopb
     - PromisesObjC
+    - R.swift
+    - R.swift.Library
     - Realm
     - RealmSwift
+    - SVProgressHUD
+    - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AutoScrollLabel: bee53a1d4532569b49cbecaf9b80ca003bed3767
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   Firebase: fc4cbf6f1592636431821ef9a3c557e4dfd9f268
@@ -1039,7 +1061,9 @@ SPEC CHECKSUMS:
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
+  Kanna: b9d00d7c11428308c7f95e1f1f84b8205f567a8f
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
+  mailcore2-ios: 3ff0be2fa553d4da9c11d39c11d51863c768f24f
   MaterialComponents: 49658f0fd7ef6e098e9943fce3f293e700595570
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
@@ -1047,9 +1071,13 @@ SPEC CHECKSUMS:
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
+  R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   Realm: bdea546851e37b4cf0a2400cef115c7c26fda488
   RealmSwift: 70945aa168db93b215c460e9c8ef680261aa28af
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  TPKeyboardAvoiding: d55b3ea7b362540af8fcf36aa3ed2e87bf210cc6
 
-PODFILE CHECKSUM: fcd4a061f279a526a25b392e1f08602232308109
+PODFILE CHECKSUM: bc39fc29178e4ec69a8452ca9b8b171ebe93030d
 
 COCOAPODS: 1.10.0

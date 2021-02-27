@@ -21,8 +21,9 @@ class NavigationController: UINavigationController {
             .foregroundColor: Color.DarkBrown, // 文字色の設定
             .font : Font.naviTitle
         ]
-        navigationBar.setTitleVerticalPositionAdjustment(5.0, for: .default)
         
+        //navigationBar.setTitleVerticalPositionAdjustment(5.0, for: .default)
+
         // ナビゲーションバーの上部に線を描く
         let topBorder = CALayer(layer: navigationBar)
         topBorder.frame = CGRect(x: 0.0, y: 0.0, width: navigationBar.frame.width, height:2.0)

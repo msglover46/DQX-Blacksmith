@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import MaterialComponents
+import Rswift
 
 class CustomDetailViewController: CommonViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -20,7 +21,7 @@ class CustomDetailViewController: CommonViewController, UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomProductCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.customCell.identifier, for: indexPath) as! CustomProductCollectionViewCell
         
         cell.setGauge(indexPath: indexPath)
         cell.layer.cornerRadius = 5.0
@@ -37,8 +38,8 @@ class CustomDetailViewController: CommonViewController, UICollectionViewDelegate
         collectionView.dataSource = self
         
         collectionView.backgroundColor = Color.BackGroundColor
-        let nib = UINib(nibName: "CustomProductCollectionViewCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "customCell")
+        let nib = UINib(nibName: R.nib.customProductCollectionViewCell.name, bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: R.reuseIdentifier.customCell.identifier)
     }
     
     override func viewDidLayoutSubviews() {

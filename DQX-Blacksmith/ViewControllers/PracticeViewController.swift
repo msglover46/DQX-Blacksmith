@@ -6,12 +6,19 @@
 //
 
 import UIKit
+import RealmSwift
 
-class PracticeViewController: CommonBlackSmithViewController {
+class PracticeViewController: CommonViewController {
 
+    var delegate: SetButtonTitle?
+    var blacksmith = Blacksmith()
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let product = realm.objects(Product.self).filter("id == %@", self.blacksmith.productID).first?.name
+        self.title = product!
+        
         // Do any additional setup after loading the view.
     }
 

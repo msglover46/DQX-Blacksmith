@@ -8,7 +8,6 @@
 import UIKit
 
 class CustomProductCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var standardLabel: StandardValueLabel!
     @IBOutlet weak var gauge: Gauge!
     
     override init(frame: CGRect) {

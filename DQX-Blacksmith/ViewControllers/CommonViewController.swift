@@ -36,11 +36,11 @@ class CommonViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
         
         // Homeボタンの実装
-        let homeBarButtonItem = UIBarButtonItem(image: UIImage(named: "home")!, style: .plain, target: self, action: #selector(homeBarButtonTapped))
+        let homeBarButtonItem = UIBarButtonItem(image: R.image.home(), style: .plain, target: self, action: #selector(homeBarButtonTapped))
         navigationItem.rightBarButtonItem = homeBarButtonItem
         
         // 戻るボタンの実装
-        let backBarButtonItem = UIBarButtonItem(image: UIImage(named: "back")!, style: .plain, target: self, action: #selector(backBarButtonTapped))
+        let backBarButtonItem = UIBarButtonItem(image: R.image.back(), style: .plain, target: self, action: #selector(backBarButtonTapped))
         navigationItem.leftBarButtonItem = backBarButtonItem
     }
     

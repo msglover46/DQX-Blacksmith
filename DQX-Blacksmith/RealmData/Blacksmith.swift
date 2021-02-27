@@ -14,17 +14,17 @@ class Blacksmith: Object {
     @objc dynamic var productID = 0 // 製品ID（主キー）
     @objc dynamic var toolID = 0 // 職人道具ID（主キー）
     @objc dynamic var keyID = "" // 複合キー（製品クラス.製品ID.職人道具ID）
-    @objc dynamic var practice:Performance? // 練習実績
-    @objc dynamic var real:Performance? // 本番実績
-    @objc dynamic var setRate:SuccessRate? // 前回の成功率
+    @objc dynamic var practice: Performance? // 練習実績
+    @objc dynamic var real: Performance? // 本番実績
+    @objc dynamic var setRate: SuccessRate? // 前回の成功率
     @objc dynamic var setTime = 0 // 前回の作業時間
     @objc dynamic var referenceRate = 0 // 成功率参照先
     @objc dynamic var referenceTime = 0 // 作業時間参照先
      /* 参照先     0:初期値を設定する, 1: 前回の値を設定する
                   2:練習での実測値を設定する, 3:本番での実測値を設定する    */
-    @objc dynamic var times = 0 // 利益算出時の職人回数
-    @objc dynamic var masterFlg = 0 // コツ　0:なし, 1:あり
-    @objc dynamic var bookmark = 0 // ブックマーク 0:なし, 1:あり
+    @objc dynamic var times = 1 // 利益算出時の職人回数
+    @objc dynamic var masterFlg = true // コツ　false:なし, true:あり
+    @objc dynamic var bookmark = false // ブックマーク false:なし, true:あり
     @objc dynamic var displayOrder = 0 // 表示順
     
     override static func primaryKey() -> String? {
@@ -42,8 +42,8 @@ class Blacksmith: Object {
 
 // 実績クラス
 class Performance: Object {
-    @objc dynamic var quantity:Quantity? // 作成数
-    @objc dynamic var time:Time? // 時間
+    @objc dynamic var quantity: Quantity? // 作成数
+    @objc dynamic var time: Time? // 時間
 }
 
 // 作成数クラス

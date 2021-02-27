@@ -14,4 +14,9 @@ target 'DQX-Blacksmith' do
   pod 'RealmSwift','5.1.0'
   pod 'AutoScrollLabel'
   pod 'MaterialComponents'
+  pod 'SVProgressHUD'
+  pod 'R.swift'
+  pod 'Alamofire'
+  pod 'Kanna'
+  pod 'TPKeyboardAvoiding'
 end

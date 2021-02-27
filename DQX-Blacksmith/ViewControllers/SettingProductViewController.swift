@@ -8,7 +8,7 @@
 import UIKit
 import RealmSwift
 
-class SettingProductViewController: CommonViewController, UITableViewDelegate, UITableViewDataSource{
+class SettingProductViewController: CommonViewController, UITableViewDelegate, UITableViewDataSource {
 
     var delegate: SetButtonTitle?
     var button = ""
@@ -59,10 +59,10 @@ class SettingProductViewController: CommonViewController, UITableViewDelegate, U
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = UITableViewCell()
         switch self.button {
         case "craftsman":
-            let cell = tableView.dequeueReusableCell(withIdentifier: "normalCell", for: indexPath)
-            cell.backgroundColor =  Color.BackGroundColor
+            cell = tableView.dequeueReusableCell(withIdentifier: "normalCell", for: indexPath)
             cell.textLabel?.text = craftsmanArray[indexPath.row]
             cell.textLabel?.font = Font.tableText
             if cell.textLabel?.text == craftsmanType {
@@ -71,11 +71,9 @@ class SettingProductViewController: CommonViewController, UITableViewDelegate, U
             } else {
                 cell.accessoryType = .none
             }
-            return cell
             
         case "level":
-            let cell = tableView.dequeueReusableCell(withIdentifier: "levelCell", for: indexPath)
-            cell.backgroundColor =  Color.BackGroundColor
+            cell = tableView.dequeueReusableCell(withIdentifier: "levelCell", for: indexPath)
             let level = self.levelArray[indexPath.row]
             let levelLabel = cell.viewWithTag(1) as! UILabel
             levelLabel.text = String(level.level)
@@ -88,13 +86,10 @@ class SettingProductViewController: CommonViewController, UITableViewDelegate, U
                 cell.accessoryType = .none
             }
             let skillLabel = cell.viewWithTag(3) as! UILabel
-            skillLabel.text = level.skill.name
-            
-            return cell
+            skillLabel.text = level.skill?.name
             
         case "category":
-            let cell = tableView.dequeueReusableCell(withIdentifier: "normalCell", for: indexPath)
-            cell.backgroundColor =  Color.BackGroundColor
+            cell = tableView.dequeueReusableCell(withIdentifier: "normalCell", for: indexPath)
             cell.textLabel?.text = categoryArray[indexPath.row].name
             cell.textLabel?.font = Font.tableText
             if cell.textLabel?.text == self.category.name {
@@ -103,11 +98,9 @@ class SettingProductViewController: CommonViewController, UITableViewDelegate, U
             } else {
                 cell.accessoryType = .none
             }
-            return cell
         
         case "product":
-            let cell = tableView.dequeueReusableCell(withIdentifier: "normalCell", for: indexPath)
-            cell.backgroundColor = Color.BackGroundColor
+            cell = tableView.dequeueReusableCell(withIdentifier: "normalCell", for: indexPath)
             cell.textLabel?.text = productArray[indexPath.row].name
             cell.textLabel?.font = Font.tableText
             if cell.textLabel?.text == self.product.name {
@@ -116,30 +109,29 @@ class SettingProductViewController: CommonViewController, UITableViewDelegate, U
             } else {
                 cell.accessoryType = .none
             }
-            return cell
             
         case "tool":
-            let cell = tableView.dequeueReusableCell(withIdentifier: "toolCell", for: indexPath)
-            cell.backgroundColor = Color.BackGroundColor
-            let toolLabel = cell.viewWithTag(1) as! UILabel
-            let concentrationLabel = cell.viewWithTag(2) as! UILabel
-            let criticalLabel = cell.viewWithTag(3) as! UILabel
+            cell = tableView.dequeueReusableCell(withIdentifier: "normalCell", for: indexPath)
+//            let toolLabel = cell.viewWithTag(1) as! UILabel
+//            let concentrationLabel = cell.viewWithTag(2) as! UILabel
+//            let criticalLabel = cell.viewWithTag(3) as! UILabel
             let tool = toolArray[indexPath.row]
             let toolName = self.setToolTitle(name: tool.name, star: tool.star)
-            toolLabel.text = toolName
-            concentrationLabel.text = "集中＋" + String(tool.concentration)
-            criticalLabel.text = "会心＋" + String(tool.criticalRate)
-            if toolLabel.text == setToolTitle(name: self.tool.name, star: self.tool.star) {
+            cell.textLabel!.text = toolName
+//            concentrationLabel.text = "集中＋" + String(tool.concentration)
+//            criticalLabel.text = "会心＋" + String(tool.criticalRate)
+            if cell.textLabel!.text == setToolTitle(name: self.tool.name, star: self.tool.star) {
                 cell.accessoryType = .checkmark
                 cell.tintColor = Color.DarkBrown
             } else {
                 cell.accessoryType = .none
             }
-            return cell
 
         default:
-            return tableView.dequeueReusableCell(withIdentifier: "normalCell", for: indexPath)
+            break
         }
+        cell.backgroundColor = Color.BackGroundColor
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
