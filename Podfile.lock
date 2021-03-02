@@ -331,7 +331,7 @@ PODS:
   - GTMSessionFetcher/Core (1.5.0)
   - Kanna (5.2.4)
   - leveldb-library (1.22)
-  - mailcore2-ios (0.6.4)
+  - LicensePlist (3.0.5)
   - MaterialComponents (119.3.0):
     - MaterialComponents/ActionSheet (= 119.3.0)
     - "MaterialComponents/ActionSheet+Theming (= 119.3.0)"
@@ -998,7 +998,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - FirebaseFirestoreSwift
   - Kanna
-  - mailcore2-ios
+  - LicensePlist
   - MaterialComponents
   - R.swift
   - RealmSwift (= 5.1.0)
@@ -1027,7 +1027,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - Kanna
     - leveldb-library
-    - mailcore2-ios
+    - LicensePlist
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
@@ -1063,7 +1063,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   Kanna: b9d00d7c11428308c7f95e1f1f84b8205f567a8f
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
-  mailcore2-ios: 3ff0be2fa553d4da9c11d39c11d51863c768f24f
+  LicensePlist: 11c638fa9dc22ddb5771cdf910242ae1ba2684da
   MaterialComponents: 49658f0fd7ef6e098e9943fce3f293e700595570
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
@@ -1078,6 +1078,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   TPKeyboardAvoiding: d55b3ea7b362540af8fcf36aa3ed2e87bf210cc6
 
-PODFILE CHECKSUM: bc39fc29178e4ec69a8452ca9b8b171ebe93030d
+PODFILE CHECKSUM: 8ab7d7d39c3848296517cb0b943a5ed08beda894
 
 COCOAPODS: 1.10.0

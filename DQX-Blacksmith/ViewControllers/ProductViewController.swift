@@ -387,7 +387,6 @@ class ProductViewController: CommonViewController, SetButtonTitle {
         
         SVProgressHUD.show(withStatus: "計算中...")
         
-        
         for item in product.recipe {
             if item.id > 0 {
                 recipe.append(item)
@@ -399,109 +398,100 @@ class ProductViewController: CommonViewController, SetButtonTitle {
         }
         
         // リンクの取得
-        AF.request(urlString).responseString { response in
+        AF.request(urlString, requestModifier: { $0.timeoutInterval = 5.0 }).responseString { response in
             if let html = response.value {
-                if let doc = try? HTML(html: html, encoding: .utf8) {
-                    for link in doc.css("a, link") {
-                        if let item = link.text {
-                            var href = Href()
-                            href.category = item
-                            href.href = self.urlString + (link["href"] ?? "")
-                            
-                            // 鍛冶道具（Tool）と素材（Material）のリンクを取得する。
-                            if href.category == "鍛冶ハンマー" {
-                                toolURL = href.href
-                            } else if href.category == "素材" {
-                                materialURL = href.href
-                            }
-                            
-                            // 製品（Product）のリンクを取得する。
-                            if category.name == "家具・庭具" {
-                                if href.category == "家具" {
-                                    productURL = href.href
-                                } else if href.category == "庭具" {
-                                    productURL2 = href.href
+                switch response.result {
+                case .failure(let error):
+                    SVProgressHUD.dismiss()
+                    SVProgressHUD.showError(withStatus: "ネットワークに接続できませんでした。接続状況をご確認の上、アプリを再起動してください。")
+                default:
+                    if let doc = try? HTML(html: html, encoding: .utf8) {
+                        for link in doc.css("a, link") {
+                            if let item = link.text {
+                                var href = Href()
+                                href.category = item
+                                href.href = self.urlString + (link["href"] ?? "")
+                                
+                                // 鍛冶道具（Tool）と素材（Material）のリンクを取得する。
+                                if href.category == "鍛冶ハンマー" {
+                                    toolURL = href.href
+                                } else if href.category == "素材" {
+                                    materialURL = href.href
                                 }
-                            } else if category.name == "ルアー" {
-                                if href.category == "釣り道具" {
-                                    productURL = href.href
-                                }
-                            } else {
-                                if href.category == category.name {
-                                    productURL = href.href
-                                }
-                            }
-                        }
-                    }
-                    
-                    // 材料の値段を取得する。
-                    AF.request(materialURL).responseString { response in
-                        if let html = response.value {
-                            if let doc = try? HTML(html: html, encoding: .utf8) {
-                                for item in materials {
-                                    let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(item.name)']]/td[4]")
-                                    var materialInfo = MaterialInfo()
-                                    materialInfo.id = item.id
-                                    materialInfo.price = self.transformPrice(node: node)
-                                    let storePrice = realm.objects(Material.self).filter("id == %@", item.id).first!.price
-                                    if storePrice > 0 {
-                                        if storePrice < materialInfo.price {
-                                            materialInfo.price = storePrice
-                                        }
+                                
+                                // 製品（Product）のリンクを取得する。
+                                if category.name == "家具・庭具" {
+                                    if href.category == "家具" {
+                                        productURL = href.href
+                                    } else if href.category == "庭具" {
+                                        productURL2 = href.href
                                     }
-                                    price.material.append(materialInfo)
+                                } else if category.name == "ルアー" {
+                                    if href.category == "釣り道具" {
+                                        productURL = href.href
+                                    }
+                                } else {
+                                    if href.category == category.name {
+                                        productURL = href.href
+                                    }
                                 }
-                                print("素材:", price.material)
                             }
                         }
                         
-                        // 道具の値段を取得する。
-                        AF.request(toolURL).responseString { response in
+                        // 材料の値段を取得する。
+                        AF.request(materialURL, requestModifier: { $0.timeoutInterval = 5.0 }).responseString { response in
                             if let html = response.value {
                                 if let doc = try? HTML(html: html, encoding: .utf8) {
-                                    switch tool.star {
-                                    case 0:
-                                        let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(tool.name)']]/td[5]")
-                                        price.tool = self.transformPrice(node: node)
-                                    case 1:
-                                        let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(tool.name)']]/td[6]")
-                                        price.tool = self.transformPrice(node: node)
-                                    case 2:
-                                        let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(tool.name)']]/td[7]")
-                                        price.tool = self.transformPrice(node: node)
-                                    case 3:
-                                        let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(tool.name)']]/td[8]")
-                                        price.tool = self.transformPrice(node: node)
-                                    default:
-                                        break
+                                    for item in materials {
+                                        let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(item.name)']]/td[4]")
+                                        var materialInfo = MaterialInfo()
+                                        materialInfo.id = item.id
+                                        materialInfo.price = self.transformPrice(node: node)
+                                        let storePrice = realm.objects(Material.self).filter("id == %@", item.id).first!.price
+                                        if storePrice > 0 {
+                                            if storePrice < materialInfo.price {
+                                                materialInfo.price = storePrice
+                                            }
+                                        }
+                                        price.material.append(materialInfo)
                                     }
-                                    print("道具:", price.tool)
+                                    print("素材:", price.material)
                                 }
                             }
                             
-                            // 製品の値段を取得する。
-                            if category.name == "家具・庭具" {
-                                AF.request(productURL).responseString { response in
-                                    if let html = response.value {
-                                        if let doc = try? HTML(html: html, encoding: .utf8) {
-                                            var node = Node()
-                                            node.none = doc.xpath("//*[@id='BOX']/table//td[div[2]/a[text()='\(product.name)']]/div[3]")
-                                            node.triple = doc.xpath("//*[@id='BOX']/table//td[div[2]/a[text()='\(product.successfulProduct)']]/div[3]")
-                                            
-                                            if price.product.none == 0 {
-                                                price.product.none = self.transformPrice(node: node.none)
-                                            }
-                                            if price.product.triple == 0 {
-                                                price.product.triple = self.transformPrice(node: node.triple)
-                                            }
+                            // 道具の値段を取得する。
+                            AF.request(toolURL, requestModifier: { $0.timeoutInterval = 5.0 }).responseString { response in
+                                if let html = response.value {
+                                    if let doc = try? HTML(html: html, encoding: .utf8) {
+                                        switch tool.star {
+                                        case 0:
+                                            let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(tool.name)']]/td[5]")
+                                            price.tool = self.transformPrice(node: node)
+                                        case 1:
+                                            let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(tool.name)']]/td[6]")
+                                            price.tool = self.transformPrice(node: node)
+                                        case 2:
+                                            let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(tool.name)']]/td[7]")
+                                            price.tool = self.transformPrice(node: node)
+                                        case 3:
+                                            let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(tool.name)']]/td[8]")
+                                            price.tool = self.transformPrice(node: node)
+                                        default:
+                                            break
                                         }
+                                        print("道具:", price.tool)
                                     }
-                                    AF.request(productURL2).responseString { response in
+                                }
+                                
+                                // 製品の値段を取得する。
+                                if category.name == "家具・庭具" {
+                                    AF.request(productURL, requestModifier: { $0.timeoutInterval = 5.0 }).responseString { response in
                                         if let html = response.value {
                                             if let doc = try? HTML(html: html, encoding: .utf8) {
                                                 var node = Node()
                                                 node.none = doc.xpath("//*[@id='BOX']/table//td[div[2]/a[text()='\(product.name)']]/div[3]")
                                                 node.triple = doc.xpath("//*[@id='BOX']/table//td[div[2]/a[text()='\(product.successfulProduct)']]/div[3]")
+                                                
                                                 if price.product.none == 0 {
                                                     price.product.none = self.transformPrice(node: node.none)
                                                 }
@@ -510,41 +500,59 @@ class ProductViewController: CommonViewController, SetButtonTitle {
                                                 }
                                             }
                                         }
-                                        print("製品:", price.product.triple, price.product.none)
+                                        AF.request(productURL2, requestModifier: { $0.timeoutInterval = 5.0 }).responseString { response in
+                                            if let html = response.value {
+                                                if let doc = try? HTML(html: html, encoding: .utf8) {
+                                                    var node = Node()
+                                                    node.none = doc.xpath("//*[@id='BOX']/table//td[div[2]/a[text()='\(product.name)']]/div[3]")
+                                                    node.triple = doc.xpath("//*[@id='BOX']/table//td[div[2]/a[text()='\(product.successfulProduct)']]/div[3]")
+                                                    if price.product.none == 0 {
+                                                        price.product.none = self.transformPrice(node: node.none)
+                                                    }
+                                                    if price.product.triple == 0 {
+                                                        price.product.triple = self.transformPrice(node: node.triple)
+                                                    }
+                                                }
+                                            }
+                                            print("製品:", price.product.triple, price.product.none)
+                                            self.price = price
+                                            SVProgressHUD.dismiss()
+                                            self.performSegue(withIdentifier: R.segue.productViewController.earnings, sender: nil)
+                                        }
+                                    }
+                                } else {
+                                    AF.request(productURL, requestModifier: { $0.timeoutInterval = 5.0 }).responseString { response in
+                                        if let html = response.value {
+                                            if let doc = try? HTML(html: html, encoding: .utf8) {
+                                                var node = Node()
+                                                if category.name == "素材" {
+                                                    let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(product.name)']]/td[4]")
+                                                    price.product.none = self.transformPrice(node: node)
+                                                } else {
+                                                    node.none = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(product.name)']]/td[5]")
+                                                    node.single = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(product.name)']]/td[6]")
+                                                    node.double = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(product.name)']]/td[7]")
+                                                    node.triple = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(product.name)']]/td[8]")
+                                                    price.product.none = self.transformPrice(node: node.none)
+                                                    price.product.single = self.transformPrice(node: node.single)
+                                                    price.product.double = self.transformPrice(node: node.double)
+                                                    price.product.triple = self.transformPrice(node: node.triple)
+                                                    print("製品:", price.product.triple, price.product.double, price.product.single, price.product.none)
+                                                }
+                                            }
+                                        }
                                         self.price = price
                                         SVProgressHUD.dismiss()
                                         self.performSegue(withIdentifier: R.segue.productViewController.earnings, sender: nil)
                                     }
                                 }
-                            } else {
-                                AF.request(productURL).responseString { response in
-                                    if let html = response.value {
-                                        if let doc = try? HTML(html: html, encoding: .utf8) {
-                                            var node = Node()
-                                            if category.name == "素材" {
-                                                let node = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(product.name)']]/td[4]")
-                                                price.product.none = self.transformPrice(node: node)
-                                            } else {
-                                                node.none = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(product.name)']]/td[5]")
-                                                node.single = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(product.name)']]/td[6]")
-                                                node.double = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(product.name)']]/td[7]")
-                                                node.triple = doc.xpath("//*[@id='BOX']/table//tr[td[1]/a[text()='\(product.name)']]/td[8]")
-                                                price.product.none = self.transformPrice(node: node.none)
-                                                price.product.single = self.transformPrice(node: node.single)
-                                                price.product.double = self.transformPrice(node: node.double)
-                                                price.product.triple = self.transformPrice(node: node.triple)
-                                                print("製品:", price.product.triple, price.product.double, price.product.single, price.product.none)
-                                            }
-                                        }
-                                    }
-                                    self.price = price
-                                    SVProgressHUD.dismiss()
-                                    self.performSegue(withIdentifier: R.segue.productViewController.earnings, sender: nil)
-                                }
                             }
                         }
                     }
                 }
+            } else {
+                SVProgressHUD.dismiss()
+                SVProgressHUD.showError(withStatus: "ネットワークに接続できませんでした。")
             }
         }
     }
@@ -751,6 +759,7 @@ class ProductViewController: CommonViewController, SetButtonTitle {
             if let error = error {
                 print("DEBUG_PRINT:", error.localizedDescription)
                 SVProgressHUD.dismiss()
+                SVProgressHUD.showError(withStatus: "ネットワークに接続できませんでした。接続状況をご確認の上、アプリを再起動してください。")
                 completion(false)
             } else {
                 if let snaps = snaps {
@@ -805,6 +814,7 @@ class ProductViewController: CommonViewController, SetButtonTitle {
         collection.getDocuments{(snaps, error) in
             if let error = error {
                 print("DEBUG_PRINT:" + error.localizedDescription)
+                SVProgressHUD.showError(withStatus: "ネットワークに接続できませんでした。接続状況をご確認の上、アプリを再起動してください。")
                 completion(false)
             } else {
                 if let snaps = snaps {

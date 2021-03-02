@@ -19,4 +19,5 @@ target 'DQX-Blacksmith' do
   pod 'Alamofire'
   pod 'Kanna'
   pod 'TPKeyboardAvoiding'
+  pod 'LicensePlist'
 end

@@ -25,9 +25,6 @@ class SettingTimeViewController: CommonViewController, UITableViewDelegate, UITa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let realm = try! Realm()
-        try! realm.write {
-            self.blacksmith.referenceTime = indexPath.row
-        }
         let cell = tableView.cellForRow(at: indexPath)!
         switch indexPath.row {
         case 1:
@@ -40,6 +37,7 @@ class SettingTimeViewController: CommonViewController, UITableViewDelegate, UITa
             if timeResult {
                 try! realm.write {
                     self.blacksmith.setTime = mstime.minutes * 60 + mstime.seconds
+                    self.blacksmith.referenceTime = indexPath.row
                 }
                 delegate?.returnTime(blacksmith: blacksmith)
                 navigationController?.popViewController(animated: false)
@@ -47,6 +45,9 @@ class SettingTimeViewController: CommonViewController, UITableViewDelegate, UITa
                 cell.isSelected = false
             }
         default:
+            try! realm.write {
+                self.blacksmith.referenceTime = indexPath.row
+            }
             delegate?.returnTime(blacksmith: blacksmith)
             navigationController?.popViewController(animated: false)
         }
@@ -61,6 +62,7 @@ class SettingTimeViewController: CommonViewController, UITableViewDelegate, UITa
             status = false
         } else if time == 0 {
             status = false
+            SVProgressHUD.setDefaultMaskType(.none)
             SVProgressHUD.showError(withStatus: "1秒〜59分59秒の値を入力してください。")
         }
         return status

@@ -25,11 +25,8 @@ class SettingRateViewController: CommonViewController, UITableViewDelegate, UITa
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let realm = try! Realm()
-        try! realm.write {
-            self.blacksmith.referenceRate = indexPath.row
-        }
         let cell = tableView.cellForRow(at: indexPath)!
+        let realm = try! Realm()
         switch indexPath.row {
         case 1:
             let tripleTextField = cell.viewWithTag(1) as! DesignedTextField
@@ -47,6 +44,7 @@ class SettingRateViewController: CommonViewController, UITableViewDelegate, UITa
             if rateResult {
                 try! realm.write {
                     self.blacksmith.setRate = rate
+                    self.blacksmith.referenceRate = indexPath.row
                 }
                 delegate?.returnRate(blacksmith: self.blacksmith)
                 navigationController?.popViewController(animated: false)
@@ -54,6 +52,9 @@ class SettingRateViewController: CommonViewController, UITableViewDelegate, UITa
                 cell.isSelected = false
             }
         default:
+            try! realm.write {
+                self.blacksmith.referenceRate = indexPath.row
+            }
             delegate?.returnRate(blacksmith: self.blacksmith)
             navigationController?.popViewController(animated: false)
         }

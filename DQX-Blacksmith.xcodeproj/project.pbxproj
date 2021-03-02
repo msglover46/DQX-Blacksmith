@@ -41,6 +41,7 @@
 		A496533625A1BA8F004F210A /* CustomProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496533425A1BA8F004F210A /* CustomProductCollectionViewCell.swift */; };
 		A496533725A1BA8F004F210A /* CustomProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A496533525A1BA8F004F210A /* CustomProductCollectionViewCell.xib */; };
 		A496533C25A2552E004F210A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496533B25A2552D004F210A /* TabBarController.swift */; };
+		A4BC2E5825EB5C1000F77FFC /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4BC2E5725EB5C1000F77FFC /* Settings.bundle */; };
 		A4FFD6C72597553C00D138C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD6C62597553C00D138C0 /* AppDelegate.swift */; };
 		A4FFD6C92597553C00D138C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD6C82597553C00D138C0 /* SceneDelegate.swift */; };
 		A4FFD6CB2597553C00D138C0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FFD6CA2597553C00D138C0 /* HomeViewController.swift */; };
@@ -95,6 +96,7 @@
 		A496533425A1BA8F004F210A /* CustomProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		A496533525A1BA8F004F210A /* CustomProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		A496533B25A2552D004F210A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A4BC2E5725EB5C1000F77FFC /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		A4FFD6C32597553C00D138C0 /* DQX-Blacksmith.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DQX-Blacksmith.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FFD6C62597553C00D138C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4FFD6C82597553C00D138C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				A4FFD6DB259758A800D138C0 /* GoogleService-Info.plist */,
 				A42723E825988D5A00AA689B /* DQX-Blacksmith-Bridging-Header.h */,
 				A494A17125C5A4340084D99A /* R.generated.swift */,
+				A4BC2E5725EB5C1000F77FFC /* Settings.bundle */,
 			);
 			path = "DQX-Blacksmith";
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				A4FFD6C02597553C00D138C0 /* Frameworks */,
 				A4FFD6C12597553C00D138C0 /* Resources */,
 				CC631DB1B905F81B8C81C178 /* [CP] Embed Pods Frameworks */,
+				A4BC2E5625EB5B8D00F77FFC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -348,6 +352,7 @@
 				A4FFD6D32597553C00D138C0 /* LaunchScreen.storyboard in Resources */,
 				A4FFD6DC259758A800D138C0 /* GoogleService-Info.plist in Resources */,
 				A4FFD6D02597553C00D138C0 /* Assets.xcassets in Resources */,
+				A4BC2E5825EB5C1000F77FFC /* Settings.bundle in Resources */,
 				A4FFD6CE2597553C00D138C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +401,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/$PROJECT_NAME/R.generated.swift\"\n";
+		};
+		A4BC2E5625EB5B8D00F77FFC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ $CONFIGURATION = \"Debug\" ]; then\n    ${PODS_ROOT}/LicensePlist/license-plist --output-path $PRODUCT_NAME/Settings.bundle\nfi\n";
 		};
 		CC631DB1B905F81B8C81C178 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -615,6 +638,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = Z36HZ8PUCD;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "DQX-Blacksmith/Info.plist";
@@ -640,6 +664,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = Z36HZ8PUCD;
 				INFOPLIST_FILE = "DQX-Blacksmith/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
